@@ -31,7 +31,9 @@ var
 
 // Init engine
 
-var stockfish = new Worker('js/stockfish.js');
+const tech = `https://cdn.jsdelivr.net/gh/Gpar2023/chess_i_guess@main/`;
+
+var stockfish = new Worker(tech + 'js/stockfish.js');
 
 function dumpLog(data) {
   if (!data) {
