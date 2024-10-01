@@ -1,4 +1,5 @@
 // init board desktop
+const fetch = `https://cdn.jsdelivr.net/gh/Gpar2023/chess_i_guess@main/`;
 
 function setDesktopBoard(position = false, sparePieces = false) {
 
@@ -10,7 +11,7 @@ function setDesktopBoard(position = false, sparePieces = false) {
       draggable: true,
       dropOffBoard: 'trash',
       sparePieces: true,
-      pieceTheme: 'img/pieces/{piece}.svg'
+      pieceTheme: fetch + `img/pieces/{piece}.svg`
     });
     return;
   }
@@ -120,7 +121,7 @@ function setDesktopBoard(position = false, sparePieces = false) {
     onMouseoverSquare: onMouseoverSquare,
 
     onSnapEnd: onSnapEnd,
-    pieceTheme: 'img/pieces/{piece}.svg'
+    pieceTheme: fetch + `img/pieces/{piece}.svg`
 
   });
 
